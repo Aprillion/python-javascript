@@ -23,5 +23,11 @@ jupyter notebook
 ```
 
 2. Re-run all cells, including the one to change CSS formatting.
+
 3. Save as [docs/index.html](./docs/index.html).
+
+```sh
+jupyter nbconvert --to html python-javascript.ipynb --NbConvertBase.default_language=javascript --stdout > docs/index.html
+```
+
 4. git add, commit, push
