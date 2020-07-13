@@ -1,3 +1,9 @@
+# project specific files created from Jupyter Notebook
+*.mjs
+*.py
+
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

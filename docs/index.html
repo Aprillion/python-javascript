@@ -13295,7 +13295,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[166]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-javascript"><pre><span></span><span class="o">%%</span><span class="nx">python</span>
@@ -13312,7 +13312,7 @@ div#notebook {
 <span class="nx">log</span><span class="p">(</span><span class="s1">&#39;efgh&#39;</span><span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">3</span><span class="p">])</span>
 <span class="nx">log</span><span class="p">(</span><span class="s1">&#39;ijkl&#39;</span><span class="p">[</span><span class="o">:-</span><span class="mi">1</span><span class="p">])</span>
 <span class="nx">log</span><span class="p">(</span><span class="s1">&#39;mnop&#39;</span><span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="p">])</span>
-<span class="nx">log</span><span class="p">(</span><span class="s1">&#39;qrst&#39;</span><span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="p">][</span><span class="o">:</span><span class="mi">2</span><span class="p">])</span>
+<span class="nx">log</span><span class="p">(</span><span class="s1">&#39;qrst&#39;</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="o">:</span><span class="p">][</span><span class="o">:</span><span class="mi">2</span><span class="p">])</span>
 </pre></div>
 
     </div>
@@ -13349,7 +13349,7 @@ rs
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[167]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-javascript"><pre><span></span><span class="o">%%</span><span class="nx">script</span> <span class="nx">node</span>
@@ -13366,7 +13366,7 @@ rs
 <span class="nx">log</span><span class="p">(</span><span class="s1">&#39;efgh&#39;</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
 <span class="nx">log</span><span class="p">(</span><span class="s1">&#39;ijkl&#39;</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">))</span>
 <span class="nx">log</span><span class="p">(</span><span class="s1">&#39;mnop&#39;</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
-<span class="nx">log</span><span class="p">(</span><span class="s1">&#39;qrst&#39;</span><span class="p">.</span><span class="nx">substr</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+<span class="nx">log</span><span class="p">(</span><span class="s1">&#39;qrst&#39;</span><span class="p">.</span><span class="nx">substr</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
 </pre></div>
 
     </div>
@@ -14106,13 +14106,13 @@ a..b.
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Functions,-variables,-and-scope">Functions, variables, and scope<a class="anchor-link" href="#Functions,-variables,-and-scope">&#182;</a></h2>
+<h2 id="Functions,-variables-and-scope">Functions, variables and scope<a class="anchor-link" href="#Functions,-variables-and-scope">&#182;</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[165]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-javascript"><pre><span></span><span class="o">%%</span><span class="nx">python</span>
@@ -14120,6 +14120,24 @@ a..b.
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -14147,28 +14165,89 @@ a..b.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[113]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-javascript"><pre><span></span><span class="o">%%</span><span class="nx">python</span>
 <span class="nx">log</span> <span class="o">=</span> <span class="nx">print</span>
+<span class="nx">def</span> <span class="nx">my_generator</span><span class="p">()</span><span class="o">:</span>
+    <span class="k">yield</span> <span class="s1">&#39;header&#39;</span>
+    <span class="k">yield</span> <span class="nx">from</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+
+<span class="nx">my_iterator</span> <span class="o">=</span> <span class="nx">my_generator</span><span class="p">()</span>
+
+<span class="nx">log</span><span class="p">(</span><span class="nx">next</span><span class="p">(</span><span class="nx">my_iterator</span><span class="p">))</span>
+<span class="k">for</span> <span class="nx">record</span> <span class="k">in</span> <span class="nx">my_iterator</span><span class="o">:</span>
+    <span class="nx">log</span><span class="p">(</span><span class="nx">record</span><span class="p">)</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>header
+1
+2
+3
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[114]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-javascript"><pre><span></span><span class="o">%%</span><span class="nx">script</span> <span class="nx">node</span>
 <span class="nx">log</span> <span class="o">=</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span>
+<span class="kd">function</span><span class="o">*</span> <span class="nx">myGenerator</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">yield</span> <span class="s1">&#39;header&#39;</span>
+    <span class="k">yield</span><span class="o">*</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="p">}</span>
+<span class="kd">let</span> <span class="nx">myIterator</span> <span class="o">=</span> <span class="nx">myGenerator</span><span class="p">()</span>
+
+<span class="nx">log</span><span class="p">(</span><span class="nx">myIterator</span><span class="p">.</span><span class="nx">next</span><span class="p">().</span><span class="nx">value</span><span class="p">)</span>
+<span class="k">for</span> <span class="p">(</span><span class="kr">const</span> <span class="nx">record</span> <span class="k">of</span> <span class="nx">myIterator</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">log</span><span class="p">(</span><span class="nx">record</span><span class="p">)</span>
+<span class="p">}</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>header
+1
+2
+3
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -14182,11 +14261,209 @@ a..b.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[161]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-javascript"><pre><span></span><span class="o">%%</span><span class="nx">python</span>
 <span class="nx">log</span> <span class="o">=</span> <span class="nx">print</span>
+<span class="nx">from</span> <span class="nx">asyncio</span> <span class="kr">import</span> <span class="nx">sleep</span><span class="p">,</span> <span class="nx">gather</span><span class="p">,</span> <span class="nx">run</span>
+<span class="nx">from</span> <span class="nx">random</span> <span class="kr">import</span> <span class="nx">random</span>
+
+<span class="nx">async</span> <span class="nx">def</span> <span class="nx">race_condition</span><span class="p">(</span><span class="nx">n</span><span class="p">)</span><span class="o">:</span>
+    <span class="nx">await</span> <span class="nx">sleep</span><span class="p">(</span><span class="nx">random</span><span class="p">())</span>
+    <span class="nx">log</span><span class="p">(</span><span class="nx">n</span><span class="p">)</span>
+
+<span class="nx">async</span> <span class="nx">def</span> <span class="nx">main</span><span class="p">()</span><span class="o">:</span>
+    <span class="nx">await</span> <span class="nx">gather</span><span class="p">(</span><span class="nx">race_condition</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span>
+                 <span class="nx">race_condition</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span>
+                 <span class="nx">race_condition</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
+<span class="nx">run</span><span class="p">(</span><span class="nx">main</span><span class="p">())</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>2
+1
+3
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[163]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="o">%%</span><span class="nx">script</span> <span class="nx">node</span>
+<span class="nx">log</span> <span class="o">=</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span>
+<span class="kr">const</span> <span class="nx">sleep</span> <span class="o">=</span> <span class="p">(</span><span class="nx">t</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">(</span><span class="nx">resolve</span> <span class="p">=&gt;</span>
+    <span class="nx">setTimeout</span><span class="p">(</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">t</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">))</span>
+
+<span class="nx">async</span> <span class="kd">function</span> <span class="nx">raceCondition</span><span class="p">(</span><span class="nx">n</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">await</span> <span class="nx">sleep</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">())</span>
+    <span class="nx">log</span><span class="p">(</span><span class="nx">n</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="nx">raceCondition</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="nx">raceCondition</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="nx">raceCondition</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>2
+3
+1
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Exceptions">Exceptions<a class="anchor-link" href="#Exceptions">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[83]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="o">%%</span><span class="nx">python</span>
+<span class="nx">log</span> <span class="o">=</span> <span class="nx">print</span>
+<span class="nx">a</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;b&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">}</span>
+
+<span class="k">try</span><span class="o">:</span>
+    <span class="nx">a</span><span class="p">[</span><span class="s2">&quot;c&quot;</span><span class="p">]</span>
+    <span class="nx">raise</span> <span class="nx">NotImplementedError</span><span class="p">(</span><span class="s1">&#39;TODO later&#39;</span><span class="p">)</span>
+<span class="nx">except</span> <span class="nx">KeyError</span> <span class="nx">as</span> <span class="nx">err</span><span class="o">:</span>
+    
+    <span class="nx">log</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+<span class="k">finally</span><span class="o">:</span>
+    <span class="nx">log</span><span class="p">(</span><span class="s1">&#39;be happy&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&#39;c&#39;
+be happy
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[82]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="o">%%</span><span class="nx">script</span> <span class="nx">node</span>
+<span class="nx">log</span> <span class="o">=</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span>
+<span class="kd">let</span> <span class="nx">a</span> <span class="o">=</span> <span class="p">{</span><span class="nx">b</span><span class="o">:</span> <span class="mi">1</span><span class="p">}</span>
+
+<span class="k">try</span> <span class="p">{</span>
+    <span class="nx">a</span><span class="p">.</span><span class="nx">c</span><span class="p">.</span><span class="nx">d</span>
+    <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s1">&#39;TODO later&#39;</span><span class="p">)</span>
+<span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">err</span> <span class="k">instanceof</span> <span class="nx">TypeError</span><span class="p">)</span> <span class="k">throw</span> <span class="nx">err</span>
+    <span class="nx">log</span><span class="p">(</span><span class="nx">err</span><span class="p">.</span><span class="nx">message</span><span class="p">)</span>
+<span class="p">}</span> <span class="k">finally</span> <span class="p">{</span>
+    <span class="nx">log</span><span class="p">(</span><span class="s1">&#39;be happy&#39;</span><span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Cannot read property &#39;d&#39; of undefined
+be happy
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Dependency-management">Dependency management<a class="anchor-link" href="#Dependency-management">&#182;</a></h2><h3 id="External">External<a class="anchor-link" href="#External">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="o">%%</span><span class="nx">sh</span>
+
+<span class="nx">virtualenv</span> <span class="nx">venv</span>
+<span class="nx">source</span> <span class="p">.</span><span class="o">/</span><span class="nx">venv</span><span class="o">/</span><span class="nx">bin</span><span class="o">/</span><span class="nx">activate</span>
+
+<span class="nx">touch</span> <span class="nx">requirements</span><span class="p">.</span><span class="nx">txt</span>
+<span class="nx">pip</span> <span class="nx">install</span> <span class="o">-</span><span class="nx">r</span> <span class="nx">requirements</span><span class="p">.</span><span class="nx">txt</span>
+<span class="nx">pip</span> <span class="nx">freeze</span> <span class="o">&gt;</span> <span class="nx">requirements</span><span class="o">-</span><span class="nx">lock</span><span class="p">.</span><span class="nx">txt</span>
 </pre></div>
 
     </div>
@@ -14199,8 +14476,13 @@ a..b.
 <div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-javascript"><pre><span></span><span class="o">%%</span><span class="nx">script</span> <span class="nx">node</span>
-<span class="nx">log</span> <span class="o">=</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span>
+<div class=" highlight hl-javascript"><pre><span></span><span class="o">%%</span><span class="nx">sh</span>
+
+
+
+
+<span class="nx">npm</span> <span class="nx">init</span>     <span class="err">#</span> <span class="nx">or</span> <span class="sb">`touch package.json`</span>
+<span class="nx">npm</span> <span class="nx">install</span>  <span class="err">#</span> <span class="nx">or</span> <span class="sb">`yarn`</span>
 </pre></div>
 
     </div>
@@ -14211,32 +14493,204 @@ a..b.
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Dependency-management">Dependency management<a class="anchor-link" href="#Dependency-management">&#182;</a></h2>
+<h3 id="Local">Local<a class="anchor-link" href="#Local">&#182;</a></h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[101]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-javascript"><pre><span></span><span class="o">%%</span><span class="nx">sh</span>
+<div class=" highlight hl-javascript"><pre><span></span><span class="o">%%</span><span class="nx">writefile</span> <span class="nx">utils</span><span class="p">.</span><span class="nx">py</span>
+<span class="nx">log</span> <span class="o">=</span> <span class="nx">print</span>
+<span class="nx">def</span> <span class="nx">hello</span><span class="p">()</span><span class="o">:</span> <span class="nx">log</span><span class="p">(</span><span class="s1">&#39;hello&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Overwriting utils.py
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[96]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-javascript"><pre><span></span><span class="o">%%</span><span class="nx">sh</span>
+<div class=" highlight hl-javascript"><pre><span></span><span class="o">%%</span><span class="nx">writefile</span> <span class="nx">utils</span><span class="p">.</span><span class="nx">mjs</span>
+<span class="kr">const</span> <span class="nx">log</span> <span class="o">=</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span>
+<span class="kr">export</span> <span class="kr">const</span> <span class="nx">hello</span> <span class="o">=</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="nx">log</span><span class="p">(</span><span class="s1">&#39;hello&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Overwriting utils.mjs
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[102]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="o">%%</span><span class="nx">writefile</span> <span class="nx">app</span><span class="p">.</span><span class="nx">py</span>
+
+<span class="nx">from</span> <span class="nx">utils</span> <span class="kr">import</span> <span class="nx">hello</span>
+<span class="nx">hello</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Overwriting app.py
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[99]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="o">%%</span><span class="nx">writefile</span> <span class="nx">app</span><span class="p">.</span><span class="nx">mjs</span>
+
+<span class="kr">import</span> <span class="p">{</span><span class="nx">hello</span><span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;./utils.mjs&#39;</span>
+<span class="nx">hello</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Overwriting app.mjs
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[103]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="o">%%</span><span class="nx">sh</span>
+<span class="nx">python</span> <span class="nx">app</span><span class="p">.</span><span class="nx">py</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>hello
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[100]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="o">%%</span><span class="nx">sh</span>
+<span class="nx">node</span> <span class="nx">app</span><span class="p">.</span><span class="nx">mjs</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>hello
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -14245,7 +14699,7 @@ a..b.
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
-<h2 id="CSS-formatting-of-this-Notebook"><em>CSS formatting of this Notebook</em><a class="anchor-link" href="#CSS-formatting-of-this-Notebook">&#182;</a></h2>
+<h2 style="color: olive; font-style: italic;">CSS formatting of this Notebook</h2>
 </div>
 </div>
 </div>
@@ -14375,10 +14829,10 @@ div.input_area {
 
 
 
-<div id="4a82a3bb-29ac-46a0-8ce1-55ac1ef4eab2"></div>
+<div id="a1b7188e-8369-49c4-a092-e7460a46e908"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#4a82a3bb-29ac-46a0-8ce1-55ac1ef4eab2');
+var element = $('#a1b7188e-8369-49c4-a092-e7460a46e908');
 
 require(['notebook/js/codecell'], (codecell) => {
   codecell.CodeCell.options_default.highlight_modes
