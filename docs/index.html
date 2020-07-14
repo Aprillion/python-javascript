@@ -13077,25 +13077,31 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Python-and-JavaScript,-side-by-side">Python and JavaScript, side by side<a class="anchor-link" href="#Python-and-JavaScript,-side-by-side">&#182;</a></h1><p>This Jupyter Notebook is intended for a live presentation to Pythonistas.</p>
+<h1 id="Python-and-JavaScript,-side-by-side">Python and JavaScript, side by side<a class="anchor-link" href="#Python-and-JavaScript,-side-by-side">&#182;</a></h1><p>This Jupyter Notebook is intended for a live presentation to Pythonistas - links and contact on <a href="https://peter.hozak.info"><big>hozak.info</big></a> .</p>
 <ul>
-<li>published on <a href="https://peter.hozak.info/python-javascript/"><big>peter.hozak.info/python-javascript</big></a></li>
+<li>published on <a href="https://peter.hozak.info/python-javascript/">peter.hozak.info/python-javascript</a></li>
 <li>source code in <a href="https://github.com/Aprillion/python-javascript">github.com/Aprillion/python-javascript</a></li>
 <li>questions also possible via github issues</li>
-<li>contacts: <a href="https://peter.hozak.info">hozak.info</a></li>
 </ul>
 <h2 id="Intro">Intro<a class="anchor-link" href="#Intro">&#182;</a></h2><p>Working in the functional programming style feels very similar in both Python and JavaScript. Differences are mostly in the syntax and in the problems being solved (think Selenium). In contrast, Java, C++, TypeScript, or Python full of Abstract Base Classes have a different mindset, despite syntax similarities with JS.</p>
-<p>Installation of CLI interpreters is similar:</p>
+<p>Following is a selection of topics that I found useful, interesting, or new. It's not an introduction to either language nor a complete guide of anything.</p>
+<h3 id="Installation">Installation<a class="anchor-link" href="#Installation">&#182;</a></h3><p>Installation of command line interface interpreters is similar:</p>
 <ul>
 <li>official download from <a href="https://www.python.org/downloads/">python.org</a> vs <a href="https://nodejs.org/en/">nodejs.org</a></li>
 <li><code>conda install python=3.8</code> vs <code>conda install nodejs=14</code></li>
 <li><code>brew install python@3.8</code> vs <code>brew install node@14</code></li>
 <li><code>pyenv install 3.8</code> vs <code>nvm install 14</code></li>
-<li><code>docker pull nikolaik/python-nodejs</code> 2 in 1 😀</li>
+<li>or 2 in 1 <code>docker pull nikolaik/python-nodejs</code> 😀</li>
 </ul>
-<p>Support of online tools like <a href="https://repl.it/languages/">repl.it</a>, cloud environments like <a href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html">AWS lambdas</a> and many other environments or containers is mostly the same.</p>
-<p>JavaScript is also available natively in browsers, mostly consistent between browsers that are released these days. No such luck if you have to support older browsers (think Python 2 in corporate environments). In the browser, JS code has access to a lot of WebAPIs, e.g. <code>document.getElementById()</code>, which are NOT part of the language itself. Due to the fact that new browsers need to support old web pages written in old JS, the language is full of historical accidents that cannot be removed from the spec, but no one is forcing developers to use the deprecated features in new projects (think COBOL in corporate environments).</p>
-<p>Following is a selection of topics that I found useful, interesting, or new. It's not an introduction to either language nor a complete guide of anything.</p>
+<h3 id="In-the-browser">In the browser<a class="anchor-link" href="#In-the-browser">&#182;</a></h3><p>Support of online tools like <a href="https://repl.it/languages/">repl.it</a>, cloud environments like <a href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html">AWS lambdas</a> and many other environments or containers is comparable.</p>
+<p>JavaScript is also available <strong>natively in browsers</strong>, mostly consistent between browsers that are released these days. No such luck if you have to support older browsers (think Python 2 in corporate environments). In the browser, JS code has access to a lot of WebAPIs, e.g. <code>document.getElementById()</code>, which are NOT part of the language itself. Due to the fact that new browsers need to support old web pages written in old JS, the language is full of historical accidents that cannot be removed from the spec, but no one is forcing developers to use the deprecated features in new projects (think COBOL in corporate environments).</p>
+<p>JS console is easily available in desktop browsers' Dev Tools, usually <kbd>F12</kbd> or a right mouse click &gt; Inspect Element &gt; Console tab.</p>
+<h3 id="Finding-answers-to-most-questions">Finding answers to most questions<a class="anchor-link" href="#Finding-answers-to-most-questions">&#182;</a></h3><ol>
+<li>google (or duckduckgo) <code>python {topic}</code> vs <code>js {topic}</code></li>
+<li>most reliable results from <a href="https://docs.python.org">python.org</a> vs <a href="https://developer.mozilla.org">mozilla.org</a> ("MDN")</li>
+<li><a href="https://stackoverflow.com">stackoverflow.com</a></li>
+<li>ask someone</li>
+</ol>
 <h2 id="Hello,-world!">Hello, world!<a class="anchor-link" href="#Hello,-world!">&#182;</a></h2>
 </div>
 </div>
@@ -13148,7 +13154,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-javascript"><pre><span></span><span class="o">%%</span><span class="nx">script</span> <span class="nx">node</span>
@@ -13257,7 +13263,7 @@ div#notebook {
 
 
 <span class="nx">log</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">PI</span><span class="p">)</span>
-<span class="c1">// no complex numbers without external library</span>
+<span class="c1">// no complex numbers without library, e.g. mathjs.org</span>
 </pre></div>
 
     </div>
@@ -13295,7 +13301,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[166]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-javascript"><pre><span></span><span class="o">%%</span><span class="nx">python</span>
@@ -13349,7 +13355,7 @@ rs
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[167]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-javascript"><pre><span></span><span class="o">%%</span><span class="nx">script</span> <span class="nx">node</span>
@@ -13440,7 +13446,7 @@ a=1
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-javascript"><pre><span></span><span class="o">%%</span><span class="nx">script</span> <span class="nx">node</span>
@@ -13516,7 +13522,7 @@ a=1
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-javascript"><pre><span></span><span class="o">%%</span><span class="nx">script</span> <span class="nx">node</span>
@@ -13609,7 +13615,7 @@ a=1
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-javascript"><pre><span></span><span class="o">%%</span><span class="nx">script</span> <span class="nx">node</span>
@@ -13926,7 +13932,7 @@ default
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-javascript"><pre><span></span><span class="o">%%</span><span class="nx">python</span>
@@ -13968,7 +13974,7 @@ no
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-javascript"><pre><span></span><span class="o">%%</span><span class="nx">script</span> <span class="nx">node</span>
@@ -14017,7 +14023,7 @@ no
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[46]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-javascript"><pre><span></span><span class="o">%%</span><span class="nx">python</span>
@@ -14061,7 +14067,7 @@ a..b.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-javascript"><pre><span></span><span class="o">%%</span><span class="nx">script</span> <span class="nx">node</span>
@@ -14112,11 +14118,19 @@ a..b.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[165]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-javascript"><pre><span></span><span class="o">%%</span><span class="nx">python</span>
 <span class="nx">log</span> <span class="o">=</span> <span class="nx">print</span>
+
+<span class="nx">def</span> <span class="nx">first</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="o">=</span><span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="nx">c</span><span class="o">=</span><span class="nx">None</span><span class="p">,</span> <span class="o">*</span><span class="nx">args</span><span class="p">)</span><span class="o">:</span>
+    <span class="nx">second</span><span class="p">(</span><span class="nx">a</span><span class="p">)</span>
+
+<span class="nx">def</span> <span class="nx">second</span><span class="p">(</span><span class="nx">b</span><span class="p">)</span><span class="o">:</span>
+    <span class="nx">log</span><span class="p">(</span><span class="nx">b</span><span class="p">)</span>
+
+<span class="nx">first</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14144,14 +14158,369 @@ a..b.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-javascript"><pre><span></span><span class="o">%%</span><span class="nx">script</span> <span class="nx">node</span>
 <span class="nx">log</span> <span class="o">=</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span>
+
+<span class="kd">function</span> <span class="nx">first</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="o">=</span><span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="nx">c</span><span class="p">,</span> <span class="p">...</span><span class="nx">rest</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">second</span><span class="p">(</span><span class="nx">a</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="kr">const</span> <span class="nx">second</span> <span class="o">=</span> <span class="kd">function</span> <span class="nx">second</span><span class="p">(</span><span class="nx">b</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">log</span><span class="p">(</span><span class="nx">b</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="nx">first</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="o">%%</span><span class="nx">python</span>
+<span class="nx">log</span> <span class="o">=</span> <span class="nx">print</span>
+
+<span class="nx">def</span> <span class="nx">f</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="o">**</span><span class="nx">kwargs</span><span class="p">)</span><span class="o">:</span>
+    <span class="nx">log</span><span class="p">(</span><span class="nx">kwargs</span><span class="p">)</span>
+
+<span class="nx">c</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;d&#39;</span><span class="o">:</span> <span class="mi">3</span><span class="p">}</span>
+
+<span class="nx">f</span><span class="p">(</span><span class="nx">a</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="nx">b</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="o">**</span><span class="nx">c</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#39;b&#39;: 2, &#39;d&#39;: 3}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="o">%%</span><span class="nx">script</span> <span class="nx">node</span>
+<span class="nx">log</span> <span class="o">=</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span>
+
+<span class="kd">function</span> <span class="nx">f</span><span class="p">({</span><span class="nx">a</span><span class="p">,</span> <span class="p">...</span><span class="nx">spread</span><span class="p">})</span> <span class="p">{</span>
+    <span class="nx">log</span><span class="p">(</span><span class="nx">spread</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="nx">c</span> <span class="o">=</span> <span class="p">{</span><span class="nx">d</span><span class="o">:</span> <span class="mi">3</span><span class="p">}</span>
+
+<span class="nx">f</span><span class="p">({</span><span class="nx">a</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">b</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span> <span class="p">...</span><span class="nx">c</span><span class="p">})</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{ b: 2, d: 3 }
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="o">%%</span><span class="nx">python</span>
+<span class="nx">log</span> <span class="o">=</span> <span class="nx">print</span>
+
+<span class="nx">points</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)]</span>
+
+<span class="nx">points</span><span class="p">.</span><span class="nx">sort</span><span class="p">(</span><span class="nx">key</span><span class="o">=</span><span class="nx">lambda</span> <span class="nx">point</span><span class="o">:</span> <span class="nx">point</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="nx">log</span><span class="p">(</span><span class="nx">points</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[(2, 1), (1, 2)]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="o">%%</span><span class="nx">script</span> <span class="nx">node</span>
+<span class="nx">log</span> <span class="o">=</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span>
+
+<span class="kr">const</span> <span class="nx">points</span> <span class="o">=</span> <span class="p">[{</span><span class="nx">x</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">y</span><span class="o">:</span> <span class="mi">2</span><span class="p">},</span> <span class="p">{</span><span class="nx">x</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span> <span class="nx">y</span><span class="o">:</span> <span class="mi">1</span><span class="p">}]</span>
+
+<span class="nx">points</span><span class="p">.</span><span class="nx">sort</span><span class="p">((</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">a</span><span class="p">.</span><span class="nx">y</span>  <span class="o">-</span> <span class="nx">b</span><span class="p">.</span><span class="nx">y</span><span class="p">)</span>
+<span class="nx">log</span><span class="p">(</span><span class="nx">points</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[ { x: 2, y: 1 }, { x: 1, y: 2 } ]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="o">%%</span><span class="nx">python</span>
+<span class="nx">log</span> <span class="o">=</span> <span class="nx">print</span>
+
+<span class="nx">a</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="nx">b</span> <span class="o">=</span> <span class="mi">2</span>
+
+
+
+<span class="nx">def</span> <span class="nx">nasty</span><span class="p">()</span><span class="o">:</span>
+    <span class="nx">a</span> <span class="o">=</span> <span class="mi">5</span>    <span class="err">#</span> <span class="nx">different</span> <span class="s1">&#39;a&#39;</span>
+    <span class="nx">global</span> <span class="nx">b</span>
+    <span class="nx">b</span> <span class="o">=</span> <span class="mi">6</span>
+
+<span class="nx">nasty</span><span class="p">()</span>
+<span class="nx">log</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1 6
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="o">%%</span><span class="nx">script</span> <span class="nx">node</span>
+<span class="nx">log</span> <span class="o">=</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span>
+
+<span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="mi">1</span>   <span class="c1">// function scope</span>
+<span class="nx">b</span> <span class="o">=</span> <span class="mi">2</span>       <span class="c1">// global scope</span>
+<span class="kd">let</span> <span class="nx">c</span> <span class="o">=</span> <span class="mi">3</span>   <span class="c1">// block scope reassignable</span>
+<span class="kr">const</span> <span class="nx">d</span> <span class="o">=</span> <span class="mi">4</span> <span class="c1">// block non-reassignable (may be mutable)</span>
+
+<span class="kd">function</span> <span class="nx">nasty</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="mi">5</span>
+    <span class="nx">b</span> <span class="o">=</span> <span class="mi">6</span>
+    <span class="nx">c</span> <span class="o">=</span> <span class="mi">7</span>
+<span class="p">}</span>
+<span class="nx">nasty</span><span class="p">()</span>
+<span class="nx">log</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">,</span> <span class="nx">c</span><span class="p">,</span> <span class="nx">d</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1 6 7 4
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Closure">Closure<a class="anchor-link" href="#Closure">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="o">%%</span><span class="nx">python</span>
+<span class="nx">log</span> <span class="o">=</span> <span class="nx">print</span>
+
+<span class="nx">def</span> <span class="nx">outer</span><span class="p">(</span><span class="nx">a</span><span class="p">)</span><span class="o">:</span>
+    <span class="k">return</span> <span class="nx">lambda</span> <span class="nx">b</span><span class="o">:</span> <span class="nx">log</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span>
+
+<span class="nx">inner</span> <span class="o">=</span> <span class="nx">outer</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="nx">outer</span><span class="p">(</span><span class="mi">2</span><span class="p">)(</span><span class="mi">3</span><span class="p">)</span>
+<span class="nx">inner</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>2 3
+1 4
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="o">%%</span><span class="nx">script</span> <span class="nx">node</span>
+<span class="nx">log</span> <span class="o">=</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span>
+
+<span class="kd">function</span> <span class="nx">outer</span><span class="p">(</span><span class="nx">a</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">(</span><span class="nx">b</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">log</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="kr">const</span> <span class="nx">inner</span> <span class="o">=</span> <span class="nx">outer</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="nx">outer</span><span class="p">(</span><span class="mi">2</span><span class="p">)(</span><span class="mi">3</span><span class="p">)</span>
+<span class="nx">inner</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>2 3
+1 4
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -14165,11 +14534,12 @@ a..b.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[113]:</div>
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-javascript"><pre><span></span><span class="o">%%</span><span class="nx">python</span>
 <span class="nx">log</span> <span class="o">=</span> <span class="nx">print</span>
+
 <span class="nx">def</span> <span class="nx">my_generator</span><span class="p">()</span><span class="o">:</span>
     <span class="k">yield</span> <span class="s1">&#39;header&#39;</span>
     <span class="k">yield</span> <span class="nx">from</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
@@ -14209,11 +14579,12 @@ a..b.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[114]:</div>
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-javascript"><pre><span></span><span class="o">%%</span><span class="nx">script</span> <span class="nx">node</span>
 <span class="nx">log</span> <span class="o">=</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span>
+
 <span class="kd">function</span><span class="o">*</span> <span class="nx">myGenerator</span><span class="p">()</span> <span class="p">{</span>
     <span class="k">yield</span> <span class="s1">&#39;header&#39;</span>
     <span class="k">yield</span><span class="o">*</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
@@ -14261,7 +14632,7 @@ a..b.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[161]:</div>
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-javascript"><pre><span></span><span class="o">%%</span><span class="nx">python</span>
@@ -14294,9 +14665,9 @@ a..b.
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>2
+<pre>3
 1
-3
+2
 </pre>
 </div>
 </div>
@@ -14307,7 +14678,7 @@ a..b.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[163]:</div>
+<div class="prompt input_prompt">In&nbsp;[50]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-javascript"><pre><span></span><span class="o">%%</span><span class="nx">script</span> <span class="nx">node</span>
@@ -14359,7 +14730,7 @@ a..b.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[83]:</div>
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-javascript"><pre><span></span><span class="o">%%</span><span class="nx">python</span>
@@ -14402,12 +14773,12 @@ be happy
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[82]:</div>
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-javascript"><pre><span></span><span class="o">%%</span><span class="nx">script</span> <span class="nx">node</span>
 <span class="nx">log</span> <span class="o">=</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span>
-<span class="kd">let</span> <span class="nx">a</span> <span class="o">=</span> <span class="p">{</span><span class="nx">b</span><span class="o">:</span> <span class="mi">1</span><span class="p">}</span>
+<span class="kr">const</span> <span class="nx">a</span> <span class="o">=</span> <span class="p">{</span><span class="nx">b</span><span class="o">:</span> <span class="mi">1</span><span class="p">}</span>
 
 <span class="k">try</span> <span class="p">{</span>
     <span class="nx">a</span><span class="p">.</span><span class="nx">c</span><span class="p">.</span><span class="nx">d</span>
@@ -14447,16 +14818,27 @@ be happy
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Linters">Linters<a class="anchor-link" href="#Linters">&#182;</a></h2><ul>
+<li><code>pep8</code> vs <code>eslint</code></li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Dependency-management">Dependency management<a class="anchor-link" href="#Dependency-management">&#182;</a></h2><h3 id="External">External<a class="anchor-link" href="#External">&#182;</a></h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[54]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-javascript"><pre><span></span><span class="o">%%</span><span class="nx">sh</span>
+<span class="nx">exit</span> <span class="mi">0</span>
 
 <span class="nx">virtualenv</span> <span class="nx">venv</span>
 <span class="nx">source</span> <span class="p">.</span><span class="o">/</span><span class="nx">venv</span><span class="o">/</span><span class="nx">bin</span><span class="o">/</span><span class="nx">activate</span>
@@ -14473,10 +14855,11 @@ be happy
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[55]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-javascript"><pre><span></span><span class="o">%%</span><span class="nx">sh</span>
+<span class="nx">exit</span> <span class="mi">0</span>
 
 
 
@@ -14499,11 +14882,12 @@ be happy
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[101]:</div>
+<div class="prompt input_prompt">In&nbsp;[41]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-javascript"><pre><span></span><span class="o">%%</span><span class="nx">writefile</span> <span class="nx">utils</span><span class="p">.</span><span class="nx">py</span>
 <span class="nx">log</span> <span class="o">=</span> <span class="nx">print</span>
+
 <span class="nx">def</span> <span class="nx">hello</span><span class="p">()</span><span class="o">:</span> <span class="nx">log</span><span class="p">(</span><span class="s1">&#39;hello&#39;</span><span class="p">)</span>
 </pre></div>
 
@@ -14532,11 +14916,12 @@ be happy
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[96]:</div>
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-javascript"><pre><span></span><span class="o">%%</span><span class="nx">writefile</span> <span class="nx">utils</span><span class="p">.</span><span class="nx">mjs</span>
 <span class="kr">const</span> <span class="nx">log</span> <span class="o">=</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span>
+
 <span class="kr">export</span> <span class="kr">const</span> <span class="nx">hello</span> <span class="o">=</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="nx">log</span><span class="p">(</span><span class="s1">&#39;hello&#39;</span><span class="p">)</span>
 </pre></div>
 
@@ -14565,10 +14950,11 @@ be happy
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[102]:</div>
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-javascript"><pre><span></span><span class="o">%%</span><span class="nx">writefile</span> <span class="nx">app</span><span class="p">.</span><span class="nx">py</span>
+
 
 <span class="nx">from</span> <span class="nx">utils</span> <span class="kr">import</span> <span class="nx">hello</span>
 <span class="nx">hello</span><span class="p">()</span>
@@ -14599,10 +14985,11 @@ be happy
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[99]:</div>
+<div class="prompt input_prompt">In&nbsp;[44]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-javascript"><pre><span></span><span class="o">%%</span><span class="nx">writefile</span> <span class="nx">app</span><span class="p">.</span><span class="nx">mjs</span>
+
 
 <span class="kr">import</span> <span class="p">{</span><span class="nx">hello</span><span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;./utils.mjs&#39;</span>
 <span class="nx">hello</span><span class="p">()</span>
@@ -14633,7 +15020,7 @@ be happy
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[103]:</div>
+<div class="prompt input_prompt">In&nbsp;[45]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-javascript"><pre><span></span><span class="o">%%</span><span class="nx">sh</span>
@@ -14665,7 +15052,7 @@ be happy
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[100]:</div>
+<div class="prompt input_prompt">In&nbsp;[46]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-javascript"><pre><span></span><span class="o">%%</span><span class="nx">sh</span>
@@ -14705,7 +15092,7 @@ be happy
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[47]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-javascript"><pre><span></span><span class="o">%%</span><span class="nx">html</span>
@@ -14795,7 +15182,7 @@ div.input_area {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[48]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-javascript"><pre><span></span><span class="o">%%</span><span class="nx">js</span>
@@ -14829,10 +15216,10 @@ div.input_area {
 
 
 
-<div id="a1b7188e-8369-49c4-a092-e7460a46e908"></div>
+<div id="a126e440-49cf-4afd-a897-2fa346254b2a"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#a1b7188e-8369-49c4-a092-e7460a46e908');
+var element = $('#a126e440-49cf-4afd-a897-2fa346254b2a');
 
 require(['notebook/js/codecell'], (codecell) => {
   codecell.CodeCell.options_default.highlight_modes
